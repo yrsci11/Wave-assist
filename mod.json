@@ -1,0 +1,40 @@
+{
+	"geode": "5.10.1",
+	"gd": {
+		"android": "2.2081"
+	},
+	"version": "v1.0.0",
+	"id": "yrcsi.wave-assist",
+	"name": "Wave Assist",
+	"developer": "yrcsi",
+	"description": "Lookahead assistance for wave sections.",
+	"tags": ["gameplay", "utility", "offline"],
+	"settings": {
+		"enabled": {
+			"type": "bool",
+			"name": "Enable Wave Assist",
+			"default": true
+		},
+		"strength": {
+			"type": "string",
+			"name": "Assistance strength",
+			"default": "Strong",
+			"one-of": ["Light", "Medium", "Strong"]
+		},
+		"margin": {
+			"type": "float",
+			"name": "Safety margin",
+			"description": "Extra clearance from hazards, in game units.",
+			"default": 1.5,
+			"min": 0.0,
+			"max": 6.0,
+			"control": { "slider": true, "input": true }
+		},
+		"safe-mode": {
+			"type": "bool",
+			"name": "Block completion when assisted",
+			"description": "Prevents assisted runs from being saved or submitted as completions.",
+			"default": true
+		}
+	}
+}
